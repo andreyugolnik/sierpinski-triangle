@@ -15,15 +15,16 @@
 
 int main(int argc, const char* argv[])
 {
-    if (argc < 3)
+    if (argc < 4)
     {
-        ::printf("%s <width> <height> <outfile>\n", argv[0]);
+        ::printf("%s <width> <height> <iterations> <outfile>\n", argv[0]);
         return -1;
     }
 
     const int width = ::atoi(argv[1]);
     const int height = ::atoi(argv[2]);
-    auto filename = argv[3];
+    const int iterations = ::atoi(argv[3]);
+    auto filename = argv[4];
 
     ::srand(::time(nullptr));
 
@@ -40,7 +41,7 @@ int main(int argc, const char* argv[])
 
     cVector<float> current{ width * 0.5f, height * 0.5f };
 
-    for (int i = 0; i < 50000; i++)
+    for (int i = 0; i < iterations; i++)
     {
         const auto v = (float)::rand() / RAND_MAX;
         if (v < 0.33f)
