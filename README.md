@@ -2,6 +2,8 @@
 
 A simple project that generates Sierpiński triangle images.
 
+https://en.wikipedia.org/wiki/Sierpinski_triangle#Chaos_game
+
 ***
 
 ```
